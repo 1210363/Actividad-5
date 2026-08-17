@@ -1,0 +1,81 @@
+:root {
+  --purple-main: #7C3AED;
+  --mint-accent: #10B981;
+}
+
+body {
+  background-color: #F9FAFB;
+  min-height: 100vh;
+}
+
+.is-custom-purple {
+  background-color: var(--purple-main) !important;
+}
+
+.has-text-purple {
+  color: var(--purple-main) !important;
+}
+
+.has-text-mint {
+  color: var(--mint-accent) !important;
+}
+
+.is-custom-mint {
+  background-color: var(--mint-accent) !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Tarjetas en la Vista de Módulos (Grid) */
+.card-interactive {
+  transition: all 0.25s ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #E5E7EB;
+}
+
+.card-interactive:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px -5px rgba(124, 58, 237, 0.2);
+  border-color: var(--purple-main);
+}
+
+/* Sistema de Pestañas / Tabbed UI */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Capas Visuales del Box Model */
+.box-layer {
+  position: relative;
+  text-align: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.margin-layer { background: #FEF3C7; border: 2px dashed #D97706; }
+.border-layer { background: #FEE2E2; border: 2px dashed #DC2626; }
+.padding-layer { background: #D1FAE5; border: 2px dashed #059669; }
+.content-layer { background: #DBEAFE; border: 2px solid #2563EB; font-weight: bold; color: #1E40AF; }
+
+.layer-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  opacity: 0.85;
+}
+
+pre {
+  overflow-x: auto;
+}
